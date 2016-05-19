@@ -1,0 +1,14 @@
+---
+applications:
+- name: hdfs-hive-demo
+  memory: 512M
+  instances: 1
+  host: hdfs-hive-demo
+  path: target/hdfs-hive-demo-${version}.jar
+  services:
+  - hdfs-shared
+  - kerberos-shared
+  - hive-shared
+  - sso
+  env:
+    VERSION: ${version}

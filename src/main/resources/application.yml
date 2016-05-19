@@ -1,0 +1,15 @@
+
+security:
+  ignored: /open,/*.js,/sdoc.jsp,/api-docs,/api-docs/default/*,/images/*,/lib/*,/css/*,/v2/api-docs
+
+spring.oauth2.resource:
+    id: cloud_controller
+    jwt:
+      keyUri: ${vcap.services.sso.credentials.tokenKey}
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.apache.hadoop.security: DEBUG
+    org.trustedanalytics: DEBUG
+
